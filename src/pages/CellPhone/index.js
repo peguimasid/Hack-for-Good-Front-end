@@ -30,7 +30,7 @@ export default function CellPhone() {
         <TextInput 
           style={styles.input}
           keyboardType="numeric"
-          placeholder="31 989898989"
+          placeholder="(31) 989898989"
           placeholderTextColor="rgba(255, 255, 255, 0.8)"
           maxLength={11}
         />

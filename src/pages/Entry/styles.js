@@ -1,16 +1,18 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
+
+
 
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#01ACEC',
     paddingHorizontal: 32,
-    paddingTop: Constants.statusBarHeight + 150,
+    paddingTop: wp('27%'),
   },
 
   title: {
-    fontSize: 70,
+    fontSize: hp('8%'),
     color: '#fff',
     fontWeight:'bold'
   },
@@ -20,7 +22,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 22,
-    marginTop: 50,
+    marginTop: hp('5%'),
     borderRadius: 5,
   },
 
