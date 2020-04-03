@@ -41,4 +41,17 @@ export default StyleSheet.create({
     borderTopLeftRadius: 9,
     borderTopRightRadius: 9,
   },
+
+  loading: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: hp('20%')
+  },
+
+  loadingText: {
+    fontSize: hp('3%'),
+    fontWeight: 'bold',
+    color: '#4f4f4f',
+  }
 })
