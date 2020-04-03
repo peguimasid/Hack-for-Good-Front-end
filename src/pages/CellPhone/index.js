@@ -1,36 +1,40 @@
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Text, View, TouchableOpacity, Keyboard,Platform, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback} from 'react-native';
+import { Text,Alert, View, TouchableOpacity, Keyboard,Platform, TextInput, KeyboardAvoidingView, TouchableWithoutFeedback} from 'react-native';
 
 import styles from './styles';
 
+import api from '../../services/api';
+
 export default function CellPhone() {
   const [cellPhone, setCellPhone] = useState('');
+
   const navigation = useNavigation();
 
   function navigateToEntryPage() {
     navigation.navigate('Entry');
   }
 
-  function navigateToConfirmCodePage() {
-    try {
-      
+
+  async function navigateToConfirmCodePage() {
+    try{
+      if(!cellPhone || cellPhone.length < 10){
+        Alert.alert('Erro', 'Informe um celular válido')
+        return;
+      }
+      await api.post('/sms',{
+        phone: cellPhone
+      })
       navigation.navigate('Confirmcode',{
         cellPhone
       })
-    } catch (error){
-
-    } 
+    }catch(error){
+      Alert.alert('Erro','Houve um erro ao tentar realizar a requisição')
+    }
   }
 
-  // const DimissKeybord = ({ children }) => (
-  //   <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-  //     {children}
-  //   </TouchableWithoutFeedback>
-  // )
 
   return (
-    // <DimissKeybord>
     <KeyboardAvoidingView
     behavior={Platform.Os == "ios" ? "padding" : "height"}
     style={styles.container}

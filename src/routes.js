@@ -9,6 +9,7 @@ import CellPhone from './pages/CellPhone';
 import ConfirmCode from './pages/ConfirmCode';
 import Name from './pages/Name';
 import Main from './pages/Main';
+import NewsAndFakeNews from './pages/NewsAndFakeNews';
 
 export default function Routes() {
   return (
@@ -20,6 +21,7 @@ export default function Routes() {
         <AppStack.Screen name="Confirmcode" component={ConfirmCode}/>
         <AppStack.Screen name="Name" component={Name}/>
         <AppStack.Screen name="Main" component={Main}/>
+        <AppStack.Screen name="NewsAndFakeNews" component={NewsAndFakeNews}/>
       </AppStack.Navigator>
 
     </NavigationContainer>
