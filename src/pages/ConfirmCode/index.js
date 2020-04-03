@@ -4,7 +4,8 @@ import { Text, View, TouchableOpacity, TextInput, Keyboard, TouchableWithoutFeed
 
 import styles from './styles';
 
-export default function ConfirmCode() {
+export default function ConfirmCode({cellPhone}) {
+  console.log(cellPhone);
   const navigation = useNavigation();
 
   function navigateToCellphonePage() {
