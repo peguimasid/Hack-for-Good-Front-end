@@ -4,16 +4,24 @@ import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles';
 
-import symptomsImg from '../../../assets/medical.png';
-import quarantineImg from '../../../assets/stuck.png';
-import doubtImg from '../../../assets/doubt.png';
-import paperImg from '../../../assets/paper.png';
+import symptomsImg from './assets/medical.png';
+import quarantineImg from './assets/stuck.png';
+import doubtImg from './assets/doubt.png';
+import paperImg from './assets/paper.png';
 
 export default function Main() {
   const navigation = useNavigation();
 
   function navigateToNewsAndFakeNewsPage() {
     navigation.navigate('NewsAndFakeNews');
+  }
+
+  function navigateToSymptomsPage() {
+    navigation.navigate('Symptoms');
+  }
+
+  function navigateToDoubtsPage() {
+    navigation.navigate('Doubts');
   }
 
   return (
@@ -25,7 +33,7 @@ export default function Main() {
     <Text style={styles.title}>Como podemos ajudar?</Text>
       <View style={styles.containerLine1}>
 
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={navigateToSymptomsPage}>
         <View style={styles.box1}>
             <Image style={styles.medicalImg} source={symptomsImg} />
           <View style={styles.symptomsTexts}>
@@ -49,7 +57,7 @@ export default function Main() {
 
       <View style={styles.containerLine2}>
 
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={navigateToDoubtsPage}>
         <View style={styles.box3}>
             <Image style={styles.doubtImg} source={doubtImg} />
           <View style={styles.symptomsTexts}>

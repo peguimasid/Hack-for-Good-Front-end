@@ -1,14 +1,23 @@
 import { StyleSheet } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-
-
 export default StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#01ACEC',
     paddingHorizontal: 32,
-    paddingTop: wp('27%'),
+    paddingTop: hp('8')
+  },
+
+  titleContainer: {
+    flexDirection: 'row',
+  },
+
+  img: {
+    width: 60,
+    height: 48.48,
+    alignSelf: 'center',
+    marginBottom: hp('4')
   },
 
   title: {
@@ -22,7 +31,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 22,
-    marginTop: hp('5%'),
+    marginTop: hp('3%'),
     borderRadius: 5,
   },
 
