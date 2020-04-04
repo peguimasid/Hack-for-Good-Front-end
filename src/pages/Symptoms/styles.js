@@ -47,11 +47,29 @@ export default StyleSheet.create({
 
   comumDescription: {
     color: '#2f2f2f',
+    fontSize: hp('2.3%'),
+    fontWeight: '200',
+    marginTop: hp('3%'),
+    paddingHorizontal: wp('8%'),
+    marginLeft: wp('3%')
+  },
+
+  lessComumDescription: {
+    color: '#2f2f2f',
     fontSize: hp('2.5%'),
     fontWeight: '200',
     marginTop: hp('3%'),
     paddingHorizontal: wp('4%'),
     marginLeft: wp('10%')
+  },
+
+  comumAlert: {
+    color: '#f00',
+    fontSize: hp('1.5%'),
+    fontWeight: '200',
+    marginTop: hp('3%'),
+    paddingHorizontal: wp('1%'),
+    marginLeft: wp('5%')
   },
 
   comum: {
@@ -79,6 +97,14 @@ export default StyleSheet.create({
     borderRadius: 10
   },
 
+  dangerBigRed:{
+    backgroundColor: '#f00',
+    width: 14,
+    height: 14,
+    marginBottom: hp('2%'),
+    borderRadius: 10
+  },
+
   dangerYellow:{
     backgroundColor: '#fdd842',
     width: 14,
@@ -92,5 +118,15 @@ export default StyleSheet.create({
     marginBottom: hp('2%'),
     fontWeight: '300',
     color: '#4f4f4f'
+  },
+
+  emergencyNumber: {
+    color: '#f00',
+    fontSize: hp('1.5%'),
+    fontWeight: 'bold',
+    marginTop: hp('3%'),
+    paddingHorizontal: wp('1%'),
+    marginLeft: wp('5%'),
+    marginBottom: hp('20%')
   }
 })

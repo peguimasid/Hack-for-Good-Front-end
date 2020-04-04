@@ -11,6 +11,7 @@ import Name from './pages/Name';
 import Main from './pages/Main';
 import NewsAndFakeNews from './pages/NewsAndFakeNews';
 import Symptoms from './pages/Symptoms';
+import Doubts from './pages/Doubts';
 
 export default function Routes() {
   return (
@@ -24,6 +25,7 @@ export default function Routes() {
         <AppStack.Screen name="Main" component={Main}/>
         <AppStack.Screen name="NewsAndFakeNews" component={NewsAndFakeNews}/>
         <AppStack.Screen name="Symptoms" component={Symptoms}/>
+        <AppStack.Screen name="Doubts" component={Doubts}/>
       </AppStack.Navigator>
 
     </NavigationContainer>

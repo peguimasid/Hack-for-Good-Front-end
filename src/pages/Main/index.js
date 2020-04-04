@@ -20,6 +20,10 @@ export default function Main() {
     navigation.navigate('Symptoms');
   }
 
+  function navigateToDoubtsPage() {
+    navigation.navigate('Doubts');
+  }
+
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -53,7 +57,7 @@ export default function Main() {
 
       <View style={styles.containerLine2}>
 
-      <TouchableOpacity onPress={() => {}}>
+      <TouchableOpacity onPress={navigateToDoubtsPage}>
         <View style={styles.box3}>
             <Image style={styles.doubtImg} source={doubtImg} />
           <View style={styles.symptomsTexts}>

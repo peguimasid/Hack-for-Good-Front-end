@@ -29,7 +29,7 @@ export default function Symptoms() {
     <View style={styles.containerAll}>
 
     <Text style={styles.comumTitleOne}>Sintomas comuns:</Text>
-
+    <Text style={styles.comumDescription}>Evite ao máximo sair de casa se estiver com algum desses sintomas.</Text>
     <View style={styles.container}>
       <View style={styles.comum}>
         <Text style={styles.symptom}>Febre</Text>
@@ -43,10 +43,11 @@ export default function Symptoms() {
         <Text style={styles.symptom}>Tosse Seca</Text>
         <View style={styles.dangerRed}></View>
       </View>
+      <Text style={styles.comumAlert}>Se você for idoso e estiver com algum desses sitomas procure ajuda médica</Text>
     </View>
 
     <Text style={styles.comumTitle}>Sintomas menos comuns:</Text>
-    <Text style={styles.comumDescription}>Esses sintomas sāo leves e começam gradualmente.</Text>
+    <Text style={styles.lessComumDescription}>Esses sintomas sāo leves e começam gradualmente.</Text>
 
     <View style={styles.container}>
       <View style={styles.comum}>
@@ -62,9 +63,19 @@ export default function Symptoms() {
         <View style={styles.dangerYellow}></View>
       </View>
       <View style={styles.comum}>
-        <Text style={styles.symptom}>Diarreia</Text>
+        <Text style={styles.symptom}>Diarréia</Text>
         <View style={styles.dangerYellow}></View>
       </View>
+    </View>
+
+    <Text style={styles.comumTitle}>Sintoma crítico:</Text>
+
+    <View style={styles.container}>
+      <View style={styles.comum}>
+        <Text style={styles.symptom}>Dificuldade de respirar</Text>
+        <View style={styles.dangerBigRed}></View>
+      </View>
+        <Text style={styles.comumAlert}>Se estiver com dificuldade para respirar, ligue para <Text style={styles.emergencyNumber}>193</Text> e solicite ajuda médica</Text>
     </View>
   </View>
 </ScrollView>
