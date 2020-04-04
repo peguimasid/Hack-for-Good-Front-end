@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { Text, View, TouchableOpacity } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import TextAnimator from '../../components/TextAnimator';
 
 import styles from './styles';
+import logo from './assets/logo.png';
 
 export default function Entry() {
   const navigation = useNavigation();
@@ -14,6 +15,7 @@ export default function Entry() {
 
   return (
     <View style={styles.container}>
+      <Image style={styles.img} source={logo} />
       <TextAnimator
        style={styles.title}
        content='Vamos juntos vencer mais essa batalha'

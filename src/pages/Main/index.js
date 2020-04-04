@@ -32,6 +32,14 @@ export default function Main() {
     navigation.navigate("NewsAndFakeNews");
   }
 
+  function navigateToSymptomsPage() {
+    navigation.navigate("Symptoms");
+  }
+
+  function navigateToDoubtsPage() {
+    navigation.navigate("Doubts");
+  }
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
@@ -61,29 +69,25 @@ export default function Main() {
           </TouchableOpacity>
         </View>
 
-        <View style={styles.containerLine2}>
-          <TouchableOpacity onPress={() => {}}>
-            <View style={styles.box3}>
-              <Image style={styles.doubtImg} source={doubtImg} />
-              <View style={styles.symptomsTexts}>
-                <Text style={styles.doubtTitle}>Dúvidas</Text>
-                <Text style={styles.doubtDescription}>
-                  Nāo sabe o que fazer?
-                </Text>
-              </View>
+        <TouchableOpacity onPress={navigateToDoubtsPage}>
+          <View style={styles.box3}>
+            <Image style={styles.doubtImg} source={doubtImg} />
+            <View style={styles.symptomsTexts}>
+              <Text style={styles.doubtTitle}>Dúvidas</Text>
+              <Text style={styles.doubtDescription}>Nāo sabe o que fazer?</Text>
             </View>
-          </TouchableOpacity>
+          </View>
+        </TouchableOpacity>
 
-          <TouchableOpacity onPress={navigateToNewsAndFakeNewsPage}>
-            <View style={styles.box4}>
-              <Image style={styles.paperImg} source={paperImg} />
-              <View style={styles.paperTexts}>
-                <Text style={styles.paperTitle}>Verdades e</Text>
-                <Text style={styles.paperTitle2}>Mentiras</Text>
-              </View>
+        <TouchableOpacity onPress={navigateToNewsAndFakeNewsPage}>
+          <View style={styles.box4}>
+            <Image style={styles.paperImg} source={paperImg} />
+            <View style={styles.paperTexts}>
+              <Text style={styles.paperTitle}>Verdades e</Text>
+              <Text style={styles.paperTitle2}>Mentiras</Text>
             </View>
-          </TouchableOpacity>
-        </View>
+          </View>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
