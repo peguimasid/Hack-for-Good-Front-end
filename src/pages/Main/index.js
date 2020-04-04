@@ -11,10 +11,10 @@ import { useNavigation } from "@react-navigation/native";
 
 import styles from "./styles";
 
-import symptomsImg from "../../../assets/medical.png";
-import quarantineImg from "../../../assets/stuck.png";
-import doubtImg from "../../../assets/doubt.png";
-import paperImg from "../../../assets/paper.png";
+import symptomsImg from "./assets/medical.png";
+import quarantineImg from "./assets/stuck.png";
+import doubtImg from "./assets/doubt.png";
+import paperImg from "./assets/paper.png";
 
 export default function Main() {
   const [name, setName] = useState("");
