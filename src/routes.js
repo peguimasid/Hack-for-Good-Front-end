@@ -12,6 +12,8 @@ import Main from "./pages/Main";
 import NewsAndFakeNews from "./pages/NewsAndFakeNews";
 import Symptoms from './pages/Symptoms';
 import Doubts from './pages/Doubts';
+import QuarantineHelp from './pages/QuarantineHelp';
+import PostToHelp from './pages/PostToHelp';
 
 const AppContainer = signed => {
   return (
@@ -28,6 +30,9 @@ const AppContainer = signed => {
         <AppStack.Screen name="NewsAndFakeNews" component={NewsAndFakeNews} />
         <AppStack.Screen name="Symptoms" component={Symptoms}/>
         <AppStack.Screen name="Doubts" component={Doubts}/>
+        <AppStack.Screen name="QuarantineHelp" component={QuarantineHelp}/>                
+        <AppStack.Screen name="PostToHelp" component={PostToHelp}/>        
+
       </AppStack.Navigator>
     </NavigationContainer>
   );

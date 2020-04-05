@@ -40,6 +40,10 @@ export default function Main() {
     navigation.navigate("Doubts");
   }
 
+  function navigateToQuarantineHelpPage() {
+    navigation.navigate("QuarantineHelp");
+  }
+
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
       <View style={styles.container}>
@@ -58,7 +62,7 @@ export default function Main() {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={navigateToQuarantineHelpPage}>
             <View style={styles.box2}>
               <Image style={styles.fishImg} source={quarantineImg} />
               <View style={styles.quarantineTexts}>
