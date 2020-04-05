@@ -46,7 +46,7 @@ export default function Main() {
         <Text style={styles.helloText}>Olá, {name}</Text>
         <Text style={styles.title}>Como podemos ajudar?</Text>
         <View style={styles.containerLine1}>
-          <TouchableOpacity onPress={() => {}}>
+          <TouchableOpacity onPress={navigateToSymptomsPage}>
             <View style={styles.box1}>
               <Image style={styles.medicalImg} source={symptomsImg} />
               <View style={styles.symptomsTexts}>
@@ -69,6 +69,7 @@ export default function Main() {
           </TouchableOpacity>
         </View>
 
+        <View style={styles.containerLine2}>
         <TouchableOpacity onPress={navigateToDoubtsPage}>
           <View style={styles.box3}>
             <Image style={styles.doubtImg} source={doubtImg} />
@@ -88,6 +89,7 @@ export default function Main() {
             </View>
           </View>
         </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );
