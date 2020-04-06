@@ -54,6 +54,7 @@ export default function QuarantineHelp() {
         }
         setLoadingPage(true);
         const { token } = JSON.parse(await AsyncStorage.getItem("Profile"));
+
         const response = await api.get("help", {
           headers: {
             Authorization: `Barear ${token}`
