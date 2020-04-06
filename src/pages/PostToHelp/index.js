@@ -70,7 +70,7 @@ export default function PostToHelp() {
       );
       Alert.alert("Sucesso!", "Solicitação cadastrada com sucesso!");
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response.data.error);
     }
   }
 
