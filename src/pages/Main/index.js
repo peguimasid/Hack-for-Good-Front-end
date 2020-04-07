@@ -8,6 +8,7 @@ import {
   AsyncStorage
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import * as MailComposer from 'expo-mail-composer';
 
 import styles from "./styles";
 
@@ -42,6 +43,13 @@ export default function Main() {
 
   function navigateToQuarantineHelpPage() {
     navigation.navigate("QuarantineHelp");
+  }
+
+  function sendMail() {
+    MailComposer.composeAsync({
+      subject: 'Tenho duvidas sobre o aplicativo',
+      recipients: ['guilhermomasid@gmail.com']
+    })
   }
 
   return (
@@ -94,6 +102,11 @@ export default function Main() {
           </View>
         </TouchableOpacity>
         </View>
+
+        <TouchableOpacity style={styles.action} onPress={sendMail}>
+          <Text style={styles.actionText}>Contate nossa equipe</Text>
+        </TouchableOpacity>
+
       </View>
     </ScrollView>
   );

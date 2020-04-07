@@ -200,5 +200,16 @@ export default StyleSheet.create({
     height: hp('10%'),
     alignSelf: 'center',
     marginBottom: hp('2.5%')
+  },
+
+  action: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    marginTop: hp('2'),
+  },
+
+  actionText: {
+    color: '#9e9e9e'
   }
 })
